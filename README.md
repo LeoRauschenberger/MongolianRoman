@@ -1,13 +1,45 @@
 # MongolianRoman
 
 Mongolian Cyrillic to Roman Converter
+Mongolians often use Roman Letters for Texting.</br>
+This program converts Cyrillic to Roman letters.</br>
+Some variations exist and you may edit the replacement list in the script accordingly. </br>
+The script can only convert from Cyrcillic to Roman letters, not the other way around (because that could not be described by a function since "i" can be  И, Й, Ь, Ы or Ъ)</br>
+N.B.: The letters Ү and Ө of the Mongolian alphabet can be copied, but not typed into Python IDLE due to an unfortunate bug.</br>
 
-Mongolians often use Roman Letters for Texting.
+Replacment list:</br>
+'А'-> 'A', 'а'-> 'a'</br>
+'Б'-> 'B', 'б'-> 'b'</br>
+'В'-> 'V', 'в'-> 'v'</br>
+'Г'-> 'G', 'г'-> 'g'</br>
+'Д'-> 'D', 'д'-> 'd'</br>
+'Е'-> 'E', 'е'-> 'e'</br>
+'Ё'-> 'Yo','ё'-> 'yo'</br>
+'Ж'-> 'J', 'ж'-> 'j'</br>
+'З'-> 'Z', 'з'-> 'z'</br>
+'И'-> 'I', 'и' -> 'i'</br>
+'Й'-> 'I' , 'й'-> 'i' or J/j</br>
+'Ө'-> 'u', 'ө'-> 'u' or O/o</br>
+'К'-> 'K', 'к'-> 'k'</br>
+'Л'-> 'L', 'л'-> 'l'</br>
+'М'-> 'M', 'м'-> 'm'</br>
+'Н'-> 'H', 'н'-> 'h'</br>
+'О'-> 'O', 'о'-> 'o'</br>
+'П'-> 'P', 'п'-> 'p'</br>
+'Р'-> 'R', 'р'-> 'r'</br>
+'С'-> 'S', 'с'-> 's'</br>
+'Т'-> 'T', 'т'-> 't'</br>
+'У'-> 'U', 'у'-> 'u'</br>
+'Ү'-> 'U', 'ү'-> 'u' or V/v</br>
+'Ф'-> 'F', 'ф'-> 'f'</br>
+'Х'-> 'H', 'х'-> 'h' or X/h or KH/kh</br>
+'Ц'-> 'Ts', 'ц'-> 'ts'</br>
+'Ч': 'Ch', 'ч'-> 'ch'</br>
+'Ш'-> 'Sh', 'ш'-> 'sh'</br>
+'Ь'-> 'I', 'ь'-> 'i'</br>
+'Ъ'-> 'I', 'ъ'-> 'i'</br>
+'Ы'-> 'I', 'ы'-> 'i'</br>
+'Э'-> 'E', 'э'-> 'e'</br>
+'Ю'-> 'Yu', 'ю'-> 'yu'</br>
+'Я'-> 'Ya', 'я' -> 'ya'</br>
 
-This program converts Cyrillic to Roman letters.
-
-Some variations exist and you may edit the replacement list in the script accordingly. 
-
-The script can only convert from Cyrcillic to Roman letters, not the other way around (because that could not be described by a function since "i" can be  И, Й, Ь, Ы or Ъ)
-
-N.B.: The letters Ү and Ө of the Mongolian alphabet can be copied, but not typed into Python IDLE due to an unfortunate bug.
