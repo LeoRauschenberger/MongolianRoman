@@ -5,7 +5,7 @@ Mongolians often use Roman Letters for Texting.</br>
 This program converts Cyrillic to Roman letters.</br>
 Some variations exist and you may edit the replacement list in the script accordingly. </br>
 The script can only convert from Cyrcillic to Roman letters, not the other way around (because that could not be described by a function since "i" can be  И, Й, Ь, Ы or Ъ)</br>
-N.B.: The letters Ү and Ө of the Mongolian alphabet can be copied, but not typed into Python IDLE due to an unfortunate bug.</br>
+N.B.: The letters Ү (Cyrillic Straight U) and Ө (Cyrillic Barred O) of the Mongolian alphabet can be copied, but not typed into Python IDLE due to an unfortunate bug.</br>
 
 Replacment list:</br>
 'А'-> 'A', 'а'-> 'a'</br>
