@@ -1,4 +1,4 @@
-# MongolianRoman Converter
+# Mongolian to Roman Converter
 
 Mongolian Cyrillic to Roman Converter
 Mongolians often use Roman Letters for Texting.</br>
