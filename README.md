@@ -1,6 +1,6 @@
 # Mongolian to Roman Converter
 
-Mongolians often use Roman Letters for Texting.</br>
+Mongolians often use Roman letters for texting.</br>
 This program converts Cyrillic to Roman letters.</br>
 Some variations exist and you may edit the replacement list in the script accordingly. </br>
 The script can only convert from Cyrcillic to Roman letters, not the other way around (because that could not be described by a function since "i" can be  И, Й, Ь, Ы or Ъ)</br>
