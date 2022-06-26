@@ -8,16 +8,19 @@ Python IDLE is based on Tkinter and has an unfortunate bug that converts the let
 Edit: I found a solution on how to get back those letters in Python (see script KeyboardModuleforMongolian.py)
 
 Standart Replacment list:</br>
-'А'-> 'A', 'а'-> 'a'</br>
-'Б'-> 'B', 'б'-> 'b'</br>
-'В'-> 'V', 'в'-> 'v'</br>
-'Г'-> 'G', 'г'-> 'g'</br>
-'Д'-> 'D', 'д'-> 'd'</br>
-'Е'-> 'E', 'е'-> 'e'</br>
-'Ё'-> 'Yo','ё'-> 'yo'</br>
-'Ж'-> 'J', 'ж'-> 'j'</br>
-'З'-> 'Z', 'з'-> 'z'</br>
-'И'-> 'I', 'и' -> 'i'</br>
+
+| Cyrillic | Roman |
+|:--------:|:-----------:|
+| А | A |
+| Б | B |
+| В | V |
+| Г | G |
+| Д | D |
+| Е | E |
+| Ё | Yo |
+| Ж | J |
+| З | Z |
+| И | I |
 'Й'-> 'I' , 'й'-> 'i' or J/j</br>
 'Ө'-> 'u', 'ө'-> 'u' or O/o</br>
 'К'-> 'K', 'к'-> 'k'</br>
