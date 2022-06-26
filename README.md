@@ -44,6 +44,6 @@ Replacment list:</br>
 'Я'-> 'Ya', 'я' -> 'ya'</br>
 
 
-Glossika differs again in the following:
+Glossika differs again in the following:</br>
 Х -> X</br>
 ю -> ju</br>
