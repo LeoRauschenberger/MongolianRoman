@@ -7,7 +7,7 @@ The script can only convert from Cyrcillic to Roman letters, not the other way a
 Python IDLE is based on Tkinter and has an unfortunate bug that converts the letters Ү (Cyrillic Straight U) and Ө (Cyrillic Barred O) into a question mark when typed in from the keyboard. You can use the AHK script (you need AHK: https://www.autohotkey.com) to fix that issue or use an IDE that avoids Tkinter e.g. Spyder.
 Edit: I found a solution on how to get back those letters in Python (see script KeyboardModuleforMongolian.py)
 
-Replacment list:</br>
+Standart Replacment list:</br>
 'А'-> 'A', 'а'-> 'a'</br>
 'Б'-> 'B', 'б'-> 'b'</br>
 'В'-> 'V', 'в'-> 'v'</br>
@@ -48,6 +48,7 @@ Glossika differs again in the following:</br>
 
 | Cyrillic | Roman |
 |:--------:|:-----------:|
+| Й | J |
 | Х | X |
 | Ю | Ju |
     
