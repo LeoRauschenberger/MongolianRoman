@@ -47,3 +47,10 @@ Replacment list:</br>
 Glossika differs again in the following:</br>
 Х -> X</br>
 ю -> ju</br>
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+    
