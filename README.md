@@ -51,6 +51,7 @@ Glossika differs again in the following:</br>
 
 | Cyrillic | Roman |
 |:--------:|:-----------:|
+| Ж | Zh |
 | Й | J |
 | Х | X |
 | Ю | Ju |
