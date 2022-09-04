@@ -6,7 +6,8 @@
 # but not typed into Python IDLE due to an unfortunate bug.
 # Some variations exist and you may edit the replacement list accordingly.
 # Author: Leo Rauschenberger 2022
-
+import os
+import sys
 import re
 import time
 import ctypes
@@ -16,7 +17,7 @@ import keyboard
 # Replacement List.
 # this isn't fully implemented yet. The higher an item is listed the higher it is prioritized!
 words_to_replace = {'байна уу': 'bnu',
-                    'байна': 'bna',
+                    'байна': 'bn',
                     'сайн': 'sn', 'Сайн': 'Sn',
                     'юм': 'ym',
                     'зүгээр': 'zgr'}
@@ -120,7 +121,6 @@ def сheckLayout():
     layout_id = user32.GetKeyboardLayout(threadid)
     language_id = hex(layout_id & (2 ** 16 - 1))
     #print(language_id)
-
     # Applying keyboard fix if Mongolian keyboard is active
     if str(language_id) == "0x450":
         # Debug tkinter such that ? resulting from Ү and Ө entries from the keyboard (equiv. to keyboard.send('...')), the keyboard.write(...) command will be used.
@@ -136,12 +136,17 @@ def сheckLayout():
         def big_straight_y():
             keyboard.send('backspace')
             keyboard.write('Ү')
-        keyboard.add_hotkey('ө', barred_o)
-        keyboard.add_hotkey('shift+ө', big_barred_o)
-        keyboard.add_hotkey('ү', straight_y)
-        keyboard.add_hotkey('shift+ү', big_straight_y)
+        try:
+            keyboard.add_hotkey('ө', barred_o)
+            keyboard.add_hotkey('shift+ө', big_barred_o)
+            keyboard.add_hotkey('ү', straight_y)
+            keyboard.add_hotkey('shift+ү', big_straight_y)
+        except:
+            print("Exited. This keyboard layout change can only take effect upon restart of program.")
+            os.execl(sys.executable, os.path.abspath(__file__), *sys.argv)
         state = "MN"
     else:
+        keyboard.unhook_all_hotkeys()
         state = "NA"
     return state 
 
@@ -151,11 +156,8 @@ keyboard.add_hotkey('escape', quit)
 # Main Loop ----------------------------------------------------------------
 state = ""
 state = сheckLayout()
-if state == "NA":
-    print("Mongolian keyboard input inactive. You can still paste text in.")
-elif state == "MN":
-    print("Mongolian keyboard layout active. Applying fix for letters Ү and Ө.")
-
+if state == "NA": print("Mongolian keyboard input inactive. You can still paste text in.")
+elif state == "MN": print("Mongolian keyboard layout active. Applying fix for letters Ү and Ө.")
 
 while True:
     time.sleep(.5)
@@ -164,11 +166,14 @@ while True:
     if IsCyrillic(inputText) == 1:
         textingForm = custom_translation(inputText, words_to_replace)
         # decide here which character set to take: char_to_replace, char_to_replace_2 or words_to_replace
-        print("Conversion texting form-----:", transliterate(textingForm, char_to_replace_1))
-        print("Conversion full form (1)  -----:", transliterate(inputText, char_to_replace_1))
+        print("Conversion texting form  -----:", transliterate(textingForm, char_to_replace_1))
+        print("Conversion full form (1) -----:", transliterate(inputText, char_to_replace_1))
         print("Conversion full form (2) -----:", transliterate(inputText, char_to_replace_2))
     elif IsCyrillic(inputText) == 0:
         print("Please enter a text in Cyrillic!")
-    input("")
+    userwish = input("Enter for new input, ESC for exit.")
+    if userwish != "":
+        break
+
 
 keyboard.unhook_all()
